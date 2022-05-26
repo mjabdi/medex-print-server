@@ -25,12 +25,12 @@ const font = "2"
 const printText = async () => {
   let data = Buffer.concat([
     TscBuffer.sizeBymm(51, 25),
-    // TscBuffer.gapDetect(),
-    // TscBuffer.offSetBymm(5),
+    TscBuffer.gapDetect(),
+    TscBuffer.offSetBymm(5),
 
     TscBuffer.home(),
     TscBuffer.cls(),
-    TscBuffer.box(100,20,800,200,2),
+    TscBuffer.box(100,20,600,200,5),
 
     // TscBuffer.text(10, 0, font, 0, 1, 1, "SURNAME"),
     // TscBuffer.text(10, lineGap, font, 0, 1, 1, "FORENAME"),
