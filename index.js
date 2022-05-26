@@ -30,7 +30,7 @@ const printText = async () => {
 
     TscBuffer.home(),
     TscBuffer.cls(),
-    TscBuffer.box(20,10,100,100),
+    TscBuffer.box(20,10,200,200),
 
     // TscBuffer.text(10, 0, font, 0, 1, 1, "SURNAME"),
     // TscBuffer.text(10, lineGap, font, 0, 1, 1, "FORENAME"),
@@ -41,7 +41,7 @@ const printText = async () => {
     // TscBuffer.text(10, 4 * lineGap, font, 0, 1, 1, "MEDICAL EXPRESS CLINIC"),
 
 
-    TscBuffer.print(1,1),
+    TscBuffer.print(1),
   ])
   await xPrinterDev.Write(data)
 }
