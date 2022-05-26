@@ -30,7 +30,7 @@ const printText = async () => {
 
     TscBuffer.home(),
     TscBuffer.cls(),
-    TscBuffer.box(20,20,400,400,10),
+    TscBuffer.box(100,20,800,200,2),
 
     // TscBuffer.text(10, 0, font, 0, 1, 1, "SURNAME"),
     // TscBuffer.text(10, lineGap, font, 0, 1, 1, "FORENAME"),
