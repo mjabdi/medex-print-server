@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/mjabdi/medex-print-server/issues"
   },
-  "homepage": "https://github.com/mjabdi/medex-print-server#readme"
+  "homepage": "https://github.com/mjabdi/medex-print-server#readme",
+  "dependencies": {
+    "jimp": "^0.16.1",
+    "usb": "^2.4.1"
+  }
 }
