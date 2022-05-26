@@ -25,16 +25,20 @@ const font = "2"
 const printText = async () => {
   let data = Buffer.concat([
     TscBuffer.sizeBymm(51, 25),
+    TscBuffer.gapDetect(),
+    TscBuffer.offSetBymm(5),
+
     TscBuffer.home(),
     TscBuffer.cls(),
-    TscBuffer.gapBymm(4,4),
-    TscBuffer.text(10, 0, font, 0, 1, 1, "SURNAME"),
-    TscBuffer.text(10, lineGap, font, 0, 1, 1, "FORENAME"),
-    TscBuffer.text(10, 2 * lineGap, font, 0, 1, 1, "SEX"),
-    TscBuffer.text(100, 2 * lineGap, font, 0, 1, 1, "DATE OF  BIRTH"),
-    TscBuffer.text(10, 3 * lineGap, font, 0, 1, 1, "DATE"),
-    TscBuffer.text(100, 3 * lineGap, font, 0, 1, 1, "TIME"),
-    TscBuffer.text(10, 4 * lineGap, font, 0, 1, 1, "MEDICAL EXPRESS CLINIC"),
+    TscBuffer.box(20,10,100,100),
+
+    // TscBuffer.text(10, 0, font, 0, 1, 1, "SURNAME"),
+    // TscBuffer.text(10, lineGap, font, 0, 1, 1, "FORENAME"),
+    // TscBuffer.text(10, 2 * lineGap, font, 0, 1, 1, "SEX"),
+    // TscBuffer.text(100, 2 * lineGap, font, 0, 1, 1, "DATE OF  BIRTH"),
+    // TscBuffer.text(10, 3 * lineGap, font, 0, 1, 1, "DATE"),
+    // TscBuffer.text(100, 3 * lineGap, font, 0, 1, 1, "TIME"),
+    // TscBuffer.text(10, 4 * lineGap, font, 0, 1, 1, "MEDICAL EXPRESS CLINIC"),
 
 
     TscBuffer.print(1,1),
