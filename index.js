@@ -19,12 +19,24 @@ const xPrinterDev = new TscPrinter(deviceList[0])
 //   ]));
 // }
 
+const lineGap = 20
+
 const printText = async () => {
   let data = Buffer.concat([
-    TscBuffer.sizeBydot(480, 240),
+    TscBuffer.sizeBymm(51, 25),
     TscBuffer.cls(),
-    TscBuffer.text(50, 10, "1", 0, 2, 2, "Medical Express Clinic"),
-    TscBuffer.print(1),
+    TscBuffer.gapBymm(4),
+    TscBuffer.text(0, 0, "1", 0, 1, 1, "SURNAME"),
+    TscBuffer.text(0, lineGap, "1", 0, 1, 1, "FORENAME"),
+    TscBuffer.text(0, 2 * lineGap, "1", 0, 1, 1, "SEX"),
+    TscBuffer.text(50, 2 * lineGap, "1", 0, 1, 1, "DATE OF  BIRTH"),
+    TscBuffer.text(0, 3 * lineGap, "1", 0, 1, 1, "DATE"),
+    TscBuffer.text(50, 3 * lineGap, "1", 0, 1, 1, "TIME"),
+    TscBuffer.text(0, 4 * lineGap, "1", 0, 1, 1, "MEDICAL EXPRESS CLINIC"),
+
+
+    TscBuffer.print(1,1,1,1,1,1,1),
+    TscBuffer.cut()
   ])
   await xPrinterDev.Write(data)
 }
