@@ -42,10 +42,10 @@ const printText = async () => {
     TscBuffer.text(75, 30 + 15, font, 0, 1, 1, "SURNAME"),
     TscBuffer.text(75, 30 + 34 + 15, font, 0, 1, 1, "FORENAME"),
     TscBuffer.text(75, 30 + 34 + 34 + 15, font, 0, 1, 1, "SEX"),
-    TscBuffer.text(175, 30 + 34 + 34 + 15, 0, 1, 1, "DOB"),
+    TscBuffer.text(175, 30 + 34 + 34 + 15,font, 0, 1, 1, "DOB"),
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "DATE"),
     TscBuffer.text(230, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "TIME"),
-    TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "MEDICAL EXPRESS CLINIC"),
+    TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "REF"),
 
 
     TscBuffer.print(1),
