@@ -69,7 +69,7 @@ const printText = async () => {
 
 
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "DATE"),
-    TscBuffer.text(130, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, dateStr.toUpperCase() || ''),
+    TscBuffer.text(115, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, dateStr.toUpperCase() || ''),
 
 
     TscBuffer.text(230, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "TIME"),
@@ -80,8 +80,8 @@ const printText = async () => {
     TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, personData.ref?.toUpperCase() || ''),
 
 
-    TscBuffer.text(40, 40, font, 90, 1, 1, "MEDICAL EXPRESS"),
-    TscBuffer.text(20, 70, font, 90, 1, 1, "CLINIC"),
+    TscBuffer.text(40, 50, font, 90, 1, 1, "MEDICAL EXPRESS"),
+    TscBuffer.text(20, 90, font, 90, 1, 1, "CLINIC"),
 
 
     TscBuffer.print(1),
