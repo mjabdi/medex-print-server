@@ -33,7 +33,7 @@ const personData = {
 
 const now = new Date()
 const dateStr = dateformat(now, "yyyy-mm-dd")
-const timeStr = dateformat(now, "HH:MM:SS")
+const timeStr = dateformat(now, "HH:MM:ss")
 
 const printText = async () => {
   let data = Buffer.concat([
@@ -61,27 +61,27 @@ const printText = async () => {
 
 
     TscBuffer.text(75, 30 + 34 + 34 + 15, font, 0, 1, 1, "SEX"),
-    TscBuffer.text(100, 30 + 34 + 34 + 15, font, 0, 1, 1, personData.sex?.toUpperCase() || ''),
+    TscBuffer.text(140, 30 + 34 + 34 + 15, font, 0, 1, 1, personData.sex?.toUpperCase() || ''),
 
 
     TscBuffer.text(175, 30 + 34 + 34 + 15,font, 0, 1, 1, "DOB"),
-    TscBuffer.text(200, 30 + 34 + 34 + 15,font, 0, 1, 1, personData.dob?.toUpperCase() || ''),
+    TscBuffer.text(240, 30 + 34 + 34 + 15,font, 0, 1, 1, personData.dob?.toUpperCase() || ''),
 
 
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "DATE"),
-    TscBuffer.text(100, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, dateStr.toUpperCase() || ''),
+    TscBuffer.text(130, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, dateStr.toUpperCase() || ''),
 
 
     TscBuffer.text(230, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "TIME"),
-    TscBuffer.text(260, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, timeStr.toUpperCase() || ''),
+    TscBuffer.text(280, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, timeStr.toUpperCase() || ''),
 
 
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "REF"),
     TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, personData.ref?.toUpperCase() || ''),
 
 
-    TscBuffer.text(50, 20, font, 90, 1, 1, "MEDICAL EXPRESS"),
-    TscBuffer.text(20, 60, font, 90, 1, 1, "CLINIC"),
+    TscBuffer.text(40, 40, font, 90, 1, 1, "MEDICAL EXPRESS"),
+    TscBuffer.text(20, 70, font, 90, 1, 1, "CLINIC"),
 
 
     TscBuffer.print(1),
