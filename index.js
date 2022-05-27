@@ -23,7 +23,7 @@ const xPrinterDev = new TscPrinter(deviceList[0])
 const lineGap = 20
 const font = "1"
 
-const data = {
+const personData = {
     surname: "Ryan",
     forename: "Matt",
     sex: "m",
@@ -53,19 +53,19 @@ const printText = async () => {
 
 
     TscBuffer.text(75, 30 + 15, font, 0, 1, 1, "SURNAME"),
-    TscBuffer.text(175, 30 + 15, font, 0, 1, 1, data.surname?.toUpperCase() || '' ),
+    TscBuffer.text(175, 30 + 15, font, 0, 1, 1, personData.surname?.toUpperCase() || '' ),
 
 
     TscBuffer.text(75, 30 + 34 + 15, font, 0, 1, 1, "FORENAME"),
-    TscBuffer.text(175, 30 + 34 + 15, font, 0, 1, 1, data.forename?.toUpperCase() || ''),
+    TscBuffer.text(175, 30 + 34 + 15, font, 0, 1, 1, personData.forename?.toUpperCase() || ''),
 
 
     TscBuffer.text(75, 30 + 34 + 34 + 15, font, 0, 1, 1, "SEX"),
-    TscBuffer.text(100, 30 + 34 + 34 + 15, font, 0, 1, 1, data.sex?.toUpperCase() || ''),
+    TscBuffer.text(100, 30 + 34 + 34 + 15, font, 0, 1, 1, personData.sex?.toUpperCase() || ''),
 
 
     TscBuffer.text(175, 30 + 34 + 34 + 15,font, 0, 1, 1, "DOB"),
-    TscBuffer.text(200, 30 + 34 + 34 + 15,font, 0, 1, 1, data.dob?.toUpperCase() || ''),
+    TscBuffer.text(200, 30 + 34 + 34 + 15,font, 0, 1, 1, personData.dob?.toUpperCase() || ''),
 
 
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "DATE"),
@@ -77,7 +77,7 @@ const printText = async () => {
 
 
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "REF"),
-    TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, data.ref?.toUpperCase() || ''),
+    TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, personData.ref?.toUpperCase() || ''),
 
 
     TscBuffer.text(50, 20, font, 90, 1, 1, "MEDICAL EXPRESS"),
