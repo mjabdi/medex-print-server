@@ -2,6 +2,7 @@ const usb = require('usb');
 const Jimp = require('jimp');
 const TscBuffer = require('./utils/TscBuffer')
 const TscPrinter = require('./utils/TscPrinter')
+const dateformat = require("dateformat")
 
 const deviceList = usb.getDeviceList();
 console.log(`Found ${deviceList.length} device list`);
@@ -22,6 +23,18 @@ const xPrinterDev = new TscPrinter(deviceList[0])
 const lineGap = 20
 const font = "1"
 
+const data = {
+    surname: "Ryan",
+    forename: "Matt",
+    sex: "m",
+    dob: "1961-06-28",
+    ref: "724-073-989"     
+}
+
+const now = new Date()
+const dateStr = dateformat(now, "yyyy-mm-dd")
+const timeStr = dateformat(now, "HH:MM:SS")
+
 const printText = async () => {
   let data = Buffer.concat([
     TscBuffer.sizeBymm(51, 25),
@@ -40,12 +53,32 @@ const printText = async () => {
 
 
     TscBuffer.text(75, 30 + 15, font, 0, 1, 1, "SURNAME"),
+    TscBuffer.text(175, 30 + 15, font, 0, 1, 1, data.surname?.toUpperCase() || '' ),
+
+
     TscBuffer.text(75, 30 + 34 + 15, font, 0, 1, 1, "FORENAME"),
+    TscBuffer.text(175, 30 + 34 + 15, font, 0, 1, 1, data.forename?.toUpperCase() || ''),
+
+
     TscBuffer.text(75, 30 + 34 + 34 + 15, font, 0, 1, 1, "SEX"),
+    TscBuffer.text(100, 30 + 34 + 34 + 15, font, 0, 1, 1, data.sex?.toUpperCase() || ''),
+
+
     TscBuffer.text(175, 30 + 34 + 34 + 15,font, 0, 1, 1, "DOB"),
+    TscBuffer.text(200, 30 + 34 + 34 + 15,font, 0, 1, 1, data.dob?.toUpperCase() || ''),
+
+
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "DATE"),
+    TscBuffer.text(100, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, dateStr.toUpperCase() || ''),
+
+
     TscBuffer.text(230, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "TIME"),
+    TscBuffer.text(260, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, timeStr.toUpperCase() || ''),
+
+
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "REF"),
+    TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, data.ref?.toUpperCase() || ''),
+
 
     TscBuffer.text(50, 20, font, 90, 1, 1, "MEDICAL EXPRESS"),
     TscBuffer.text(20, 60, font, 90, 1, 1, "CLINIC"),
