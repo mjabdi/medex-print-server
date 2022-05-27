@@ -48,7 +48,7 @@ const printText = async () => {
     TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "REF"),
 
     TscBuffer.text(50, 20, font, 90, 1, 1, "MEDICAL EXPRESS"),
-    TscBuffer.text(50, 60, font, 90, 1, 1, "CLINIC"),
+    TscBuffer.text(20, 60, font, 90, 1, 1, "CLINIC"),
 
 
     TscBuffer.print(1),
