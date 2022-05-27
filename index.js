@@ -20,7 +20,7 @@ const xPrinterDev = new TscPrinter(deviceList[0])
 // }
 
 const lineGap = 20
-const font = "2"
+const font = "1"
 
 const printText = async () => {
   let data = Buffer.concat([
@@ -39,13 +39,13 @@ const printText = async () => {
     TscBuffer.box(70 + 150,30 + 34 + 34 + 34 , 370 ,30 + 34 + 34 + 34 + 34 ,1,20),
 
 
-    // TscBuffer.text(10, 0, font, 0, 1, 1, "SURNAME"),
-    // TscBuffer.text(10, lineGap, font, 0, 1, 1, "FORENAME"),
-    // TscBuffer.text(10, 2 * lineGap, font, 0, 1, 1, "SEX"),
-    // TscBuffer.text(100, 2 * lineGap, font, 0, 1, 1, "DATE OF  BIRTH"),
-    // TscBuffer.text(10, 3 * lineGap, font, 0, 1, 1, "DATE"),
-    // TscBuffer.text(100, 3 * lineGap, font, 0, 1, 1, "TIME"),
-    // TscBuffer.text(10, 4 * lineGap, font, 0, 1, 1, "MEDICAL EXPRESS CLINIC"),
+    TscBuffer.text(75, 30 + 15, font, 0, 1, 1, "SURNAME"),
+    TscBuffer.text(75, 30 + 34 + 15, font, 0, 1, 1, "FORENAME"),
+    TscBuffer.text(75, 30 + 34 + 34 + 15, font, 0, 1, 1, "SEX"),
+    TscBuffer.text(175, 30 + 34 + 34 + 15, 0, 1, 1, "DOB"),
+    TscBuffer.text(75, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "DATE"),
+    TscBuffer.text(200, 30 + 34 + 34 + 34 + 15, font, 0, 1, 1, "TIME"),
+    TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "MEDICAL EXPRESS CLINIC"),
 
 
     TscBuffer.print(1),
