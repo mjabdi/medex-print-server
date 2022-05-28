@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/mjabdi/medex-print-server#readme",
   "dependencies": {
+    "config": "^3.3.7",
     "dateformat": "^4.6.3",
     "jimp": "^0.16.1",
+    "mongoose": "^6.3.4",
     "usb": "^2.4.1"
   }
 }
