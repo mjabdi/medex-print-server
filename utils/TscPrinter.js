@@ -82,7 +82,7 @@
             _resolve();
           } else {
             setTimeout(function () {
-              console.log('print Timeout !!!')
+            //   console.log('print Timeout !!!')
               if (!finish) {
                 _resolve();
                 finish = true;

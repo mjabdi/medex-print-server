@@ -26,10 +26,10 @@ const printText = async (personData) => {
 
     let data = Buffer.concat([
         TscBuffer.sizeBymm(51, 25),
-        TscBuffer.gapDetect(),
-        TscBuffer.offSetBymm(5),
+        // TscBuffer.gapDetect(),
+        // TscBuffer.offSetBymm(5),
 
-        TscBuffer.home(),
+        // TscBuffer.home(),
         TscBuffer.cls(),
         TscBuffer.box(70, 30, 370, 200, 1, 20),
         TscBuffer.box(70, 30, 370, 30 + 34, 1, 20),
