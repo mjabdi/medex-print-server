@@ -39,6 +39,8 @@ const printText = async (personData) => {
         TscBuffer.box(70, 30 + 34 + 34 + 34, 70 + 150, 30 + 34 + 34 + 34 + 34, 1, 20),
         TscBuffer.box(70 + 150, 30 + 34 + 34 + 34, 370, 30 + 34 + 34 + 34 + 34, 1, 20),
 
+        TscBuffer.text(40, 50, font, 90, 1, 1, "MEDICAL EXPRESS"),
+        TscBuffer.text(20, 90, font, 90, 1, 1, "CLINIC"),
 
         TscBuffer.text(75, 30 + 15, font, 0, 1, 1, "SURNAME"),
         TscBuffer.text(175, 30 + 15, font, 0, 1, 1, personData.surname?.toUpperCase() || ''),
@@ -68,8 +70,7 @@ const printText = async (personData) => {
         TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, personData.ref?.toUpperCase() || ''),
 
 
-        TscBuffer.text(40, 50, font, 90, 1, 1, "MEDICAL EXPRESS"),
-        TscBuffer.text(20, 90, font, 90, 1, 1, "CLINIC"),
+
 
 
         TscBuffer.print(1),
