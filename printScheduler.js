@@ -13,8 +13,8 @@ const checkForPrint = async () => {
         try {
 
             const personData = {
-                forename: bloodBooking.fullname.split(' ').slice(0, -1).join(' '),
-                surname: bloodBooking.fullname.split(' ').slice(-1).join(' '),
+                forename: bloodBooking.fullname.trim().split(' ').slice(0, -1).join(' '),
+                surname: bloodBooking.fullname.trim().split(' ').slice(-1).join(' '),
                 dob: bloodBooking.birthDate,
                 ref: bloodBooking.bookingRef,
             }
