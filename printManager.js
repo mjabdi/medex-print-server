@@ -26,7 +26,7 @@ const printText = async (personData) => {
 
     let data = Buffer.concat([
         TscBuffer.sizeBymm(51, 25),
-        TscBuffer.gapDetect(),
+        // TscBuffer.gapDetect(),
         // TscBuffer.offSetBymm(5),
 
         // TscBuffer.home(),
@@ -71,7 +71,7 @@ const printText = async (personData) => {
 
 
 
-
+        TscBuffer.formFeed(),
 
         TscBuffer.print(1),
     ])
