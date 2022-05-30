@@ -71,7 +71,7 @@ const printText = async (personData) => {
         TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, personData.ref?.toUpperCase() || ''),
 
         TscBuffer.print(1),
-        TscBuffer.feed(100),
+        TscBuffer.feed(150),
         TscBuffer.cut()
     ])
     await xPrinterDev.Write(data)
