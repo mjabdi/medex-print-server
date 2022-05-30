@@ -26,7 +26,7 @@ const printText = async (personData) => {
 
     let data = Buffer.concat([
         TscBuffer.sizeBymm(51, 25),
-        // TscBuffer.gapDetect(),
+        TscBuffer.gapDetect(),
         // TscBuffer.offSetBymm(5),
 
         // TscBuffer.home(),
@@ -76,6 +76,7 @@ const printText = async (personData) => {
         TscBuffer.print(1),
     ])
     await xPrinterDev.Write(data)
+  
 }
 
 module.exports = {
