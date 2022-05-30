@@ -26,7 +26,7 @@ const printText = async (personData) => {
 
     let data = Buffer.concat([
         TscBuffer.sizeBymm(51, 25),
-        TscBuffer.formFeed(),
+        // TscBuffer.formFeed(),
         // TscBuffer.gapDetect(),
         // TscBuffer.offSetBymm(5),
 
@@ -70,8 +70,9 @@ const printText = async (personData) => {
         TscBuffer.text(75, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, "REF"),
         TscBuffer.text(120, 30 + 34 + 34 + 34 + 34 + 15, font, 0, 1, 1, personData.ref?.toUpperCase() || ''),
 
-
         TscBuffer.print(1),
+
+        TscBuffer.cut()
     ])
     await xPrinterDev.Write(data)
   
