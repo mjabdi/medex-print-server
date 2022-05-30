@@ -71,7 +71,7 @@ const printText = async (personData) => {
 
 
 
-        TscBuffer.formFeed(),
+        TscBuffer.feed(100),
 
         TscBuffer.print(1),
     ])
