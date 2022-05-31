@@ -126,6 +126,15 @@ const STDBookingSchema = new mongoose.Schema({
         default: false
     },
 
+    printStatus: {  // preparing - printing - printed
+        type: String,
+        required: false,
+    },
+
+    gender: {  // F/M
+        type: String,
+        required: false
+    }
 
 
 });
