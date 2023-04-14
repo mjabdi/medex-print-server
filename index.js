@@ -7,7 +7,7 @@ const dateformat = require("dateformat")
 const deviceList = usb.getDeviceList();
 console.log(`Found ${deviceList.length} device list`);
 
-const xPrinterDev = new TscPrinter(deviceList[2])
+const xPrinterDev = new TscPrinter(deviceList[3])
 
 // const printImage = async () => {
 //   const imgPath = '../assets/sample-image.jpg';
