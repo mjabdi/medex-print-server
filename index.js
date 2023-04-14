@@ -7,7 +7,7 @@ const dateformat = require("dateformat")
 const deviceList = usb.getDeviceList();
 console.log(`Found ${deviceList.length} device list`);
 
-const xPrinterDev = new TscPrinter(deviceList[0])
+const xPrinterDev = new TscPrinter(deviceList[1])
 
 // const printImage = async () => {
 //   const imgPath = '../assets/sample-image.jpg';
@@ -19,6 +19,7 @@ const xPrinterDev = new TscPrinter(deviceList[0])
 //     TscBuffer.print(1)
 //   ]));
 // }
+
 
 const lineGap = 20
 const font = "1"
